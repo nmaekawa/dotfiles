@@ -23,3 +23,9 @@ shopt -s histappend
 # define homeshick function
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
+# install vim neobundle if not already installed
+if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
+    mkdir ~/.vim/bundle
+    git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+    vim +NeoBundleInstall +qall
+fi
