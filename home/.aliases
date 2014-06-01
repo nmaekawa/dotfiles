@@ -1,0 +1,21 @@
+# bash aliases
+
+# detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then
+    colorflag="--color" # linux ls
+else
+    colorflag="-G"      # macos ls
+
+alias l='ls -F ${colorflag}'
+alias ls='ls -F ${colorflag}'
+alias l.='ls -d ${colorflag} .[a-zA-Z]*'
+alias ll='ls -lF ${colorflag}'
+
+# colorize grep output
+alias grep='grep --color-auto'
+
+# macos has no `md5sum`, use `md5` instead
+command -v md5sum > /dev/null || alias md5sum="md5"
+
+# macos has no `sha1sum`, use `shasum` instead
+command -v sha1sum > /dev/null || alias sha1sum="shasum"

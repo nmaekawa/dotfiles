@@ -1,0 +1,65 @@
+[user]
+	name = nmaekawa
+	email = nmaekawa@dce.harvard.edu
+[color]
+	interactive = auto
+	ui          = always
+[colo "branch"]
+	current = yellow bold
+	local   = green bold
+	remote  = cyan bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old  = red bold
+	new  = green bold
+	whitespace = red reverse
+[color "status"]
+	added     = green bold
+	changed   = yellow bold
+	untracked = red bold
+[color "sh"]
+	branch = yellow
+[core]
+	editor = vim
+	excludesFiles = ~nmaekawa/.gitignore
+	excludesfile = ~nmaekawa/.gitignore_global
+[push]
+	default = matching
+
+[alias]
+	s = status
+	sb = status -s -b
+	##########
+	d = diff
+	##########
+	ci = commit
+	ca = commit -a
+	cm = commit -m
+	cam = commit -am
+	##########
+	a = add
+	ai = add -i
+	##########
+	unstage = reset HEAD
+	##########
+	l = log --oneline
+	lg = log --oneline --graph --decorate
+	##########
+	co = checkout
+	cob = checkout -b
+	##########
+	b = branch
+	ba = branch -a
+	bd = branch -d
+	br = branch -r
+	##########
+	r = remote
+	ra = remote add
+	rr = remote rm
+	rv = remote -v
+	rs = remote show
+[commit]
+	template = ~nmaekawa/.gitmessage.txt
+[mergetool]
+	keepBackup = true

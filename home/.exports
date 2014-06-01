@@ -1,0 +1,37 @@
+# bash exports
+
+# if running interactively, then:
+if [ "$PS1" ]; then
+    export PS1='\u@\h:\w > '
+    export TERM=xterm
+    export EDITOR=vim
+    set -o vi
+fi
+
+# personal bin always comes first
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+
+# larger bash history
+export HISTSIZE=32768
+export HISTFILESIZE=${HISTSIZE}
+export HISTCONTROL=ignoredups
+# make some command not show up in history
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+
+# prefer us english and use utf-8
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+# highlight section titles in man pages
+export LESS_TERMCAP_md="${ORANGE}"
+
+# don't clear screen after quitting man page
+export MANPAGER="less -X"
+
+# always enable colored `grep` output
+export GREP_OPTIONS="--color=auto"
+
+export CC=gcc
+
+# python virtualenv dir
+export WORKON_HOME=~/.virtualenvs

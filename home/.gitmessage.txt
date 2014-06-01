@@ -1,0 +1,14 @@
+[jira-tkt] summary
+
+... detailed explanation of commit ...
+
+# 50-character subject line
+#
+# 72-character wrapped longer description. This should answer:
+#
+# * Why was this change necessary?
+# * How does it address the problem?
+# * Are there any side effects?
+# * describe behavior, not what you've implemented
+#
+# Include a link to the ticket, if any.
