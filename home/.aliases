@@ -5,6 +5,7 @@ if ls --color > /dev/null 2>&1; then
     colorflag="--color" # linux ls
 else
     colorflag="-G"      # macos ls
+fi
 
 alias l='ls -F ${colorflag}'
 alias ls='ls -F ${colorflag}'
@@ -19,3 +20,4 @@ command -v md5sum > /dev/null || alias md5sum="md5"
 
 # macos has no `sha1sum`, use `shasum` instead
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
+

@@ -22,3 +22,4 @@ if [ -t 1 ]; then
     echo # newline
 fi
 }
+

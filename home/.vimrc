@@ -198,13 +198,13 @@ nnoremap <C-L> :nohl<CR><C-L>
 "------------------------------------------------------------
 " plugins
 "
-so ~/dotfiles/vim/plugins.vim
+so ~/.vim/plugins.vim
 
 
 "------------------------------------------------------------
 " vimwiki
 "
-so ~/dotfiles/vim/vimwiki.vim
+so ~/.vim/vimwiki.vim
 
 
 "------------------------------------------------------------

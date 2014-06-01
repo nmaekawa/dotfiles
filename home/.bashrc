@@ -20,3 +20,6 @@ shopt -s nocaseglob
 # append history rather than overwrite
 shopt -s histappend
 
+# define homeshick function
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
