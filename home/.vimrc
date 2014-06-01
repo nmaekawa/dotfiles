@@ -105,9 +105,6 @@ catch
 endtry
 set background=dark
 
-" Enable syntax highlighting
-syntax on
-
 " intelligent auto-indenting for each filetype,
 filetype indent plugin on
 
@@ -210,4 +207,8 @@ so ~/.vim/vimwiki.vim
 "------------------------------------------------------------
 " pydiction location
 let g:pydiction_location='~nmaekawa/Applications/vim/vimfiles/ftplugin/pydiction-1.2/complete-dict'
+
+" not sure why this has to be last...
+" Enable syntax highlighting
+syntax on
 

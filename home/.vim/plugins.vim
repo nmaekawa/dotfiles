@@ -16,7 +16,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
     "NeoBundle 'scrooloose/syntastic'
     NeoBundle 'Shougo/neosnippet.vim'
     NeoBundle 'Shougo/neosnippet-snippets'
-    NeoBundle 'Shougo/unite'
+    NeoBundle 'Shougo/unite.vim'
     NeoBundle 'tpope/vim-fugitive'
     NeoBundle 'kien/ctrlp.vim'
     NeoBundle 'flazz/vim-colorschemes'
