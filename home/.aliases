@@ -13,7 +13,7 @@ alias l.='ls -d ${colorflag} .[a-zA-Z]*'
 alias ll='ls -lF ${colorflag}'
 
 # colorize grep output
-alias grep='grep --color-auto'
+alias grep='grep --color=auto'
 
 # macos has no `md5sum`, use `md5` instead
 command -v md5sum > /dev/null || alias md5sum="md5"
