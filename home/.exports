@@ -22,10 +22,15 @@ NC='\e[0m'
 # if running interactively, then:
 if [ "$PS1" ]; then
     #export PS1='\u@\h:\w > '
-    export PS1="${LIGHTGRAY}#${GREEN}[${LIGHTBLUE}\t${GREEN}] ${LIGHTRED}\u${GREEN}@${LIGHTRED}\h${GREEN}:${PURPLE}\w${LIGHTGRAY} >\n"
     export TERM=xterm
     export EDITOR=vim
     set -o vi
+
+    PS1="${LIGHTGRAY}#${GREEN}[${LIGHTBLUE}\t${GREEN}] "   # time 24h
+    PS1+="${LIGHTRED}\u${GREEN}@${YELLOW}\h${GREEN}:"      # user and hostname
+    PS1+="${PURPLE}\w${LIGHTGRAY} "                        # pwd
+    PS1+="\$(prompt_git \"${white} on ${violet}\")"        # Git repository details
+    PS1+="\n";
 fi
 
 # personal bin always comes first
