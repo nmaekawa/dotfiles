@@ -44,7 +44,7 @@
 	unstage = reset HEAD
 	##########
 	l = log --oneline
-	lg = log --oneline --graph --decorate
+	lg = log --oneline --decorate
 	##########
 	co = checkout
 	cob = checkout -b
