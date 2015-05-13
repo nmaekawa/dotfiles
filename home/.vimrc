@@ -195,18 +195,18 @@ nnoremap <C-L> :nohl<CR><C-L>
 "------------------------------------------------------------
 " plugins
 "
-so ~/.vim/plugins.vim
+"so ~/.vim/plugins.vim
 
 
 "------------------------------------------------------------
 " vimwiki
 "
-so ~/.vim/vimwiki.vim
+"so ~/.vim/vimwiki.vim
 
 
 "------------------------------------------------------------
 " pydiction location
-let g:pydiction_location='~nmaekawa/Applications/vim/vimfiles/ftplugin/pydiction-1.2/complete-dict'
+"let g:pydiction_location='~nmaekawa/Applications/vim/vimfiles/ftplugin/pydiction-1.2/complete-dict'
 
 " not sure why this has to be last...
 " Enable syntax highlighting

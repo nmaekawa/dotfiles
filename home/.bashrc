@@ -29,3 +29,8 @@ if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
     git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
     vim +NeoBundleInstall +qall
 fi
+
+# other personal env vars
+if [ -e ~/.ssh/naomi.env ]; then
+    source ~/.ssh/naomi.env
+fi
