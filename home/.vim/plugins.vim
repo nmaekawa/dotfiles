@@ -20,6 +20,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
     NeoBundle 'tpope/vim-fugitive'
     NeoBundle 'kien/ctrlp.vim'
     NeoBundle 'flazz/vim-colorschemes'
+    NeoBundle 'vimwiki/vimwiki'
 call neobundle#end()
 
 " check for uninstalled bundles on startup

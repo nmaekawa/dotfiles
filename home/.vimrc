@@ -1,3 +1,4 @@
+
 "------------------------------------------------------------
 " based on
 "
@@ -105,13 +106,11 @@ catch
 endtry
 set background=dark
 
-" intelligent auto-indenting for each filetype,
-filetype indent plugin on
 
-if has("autocmd")
-    " treat .json files as .js
-    autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-endif
+"if has("autocmd")
+"    " treat .json files as .js
+"    autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+"endif
 
 "------------------------------------------------------------
 " reading/writing
@@ -195,13 +194,13 @@ nnoremap <C-L> :nohl<CR><C-L>
 "------------------------------------------------------------
 " plugins
 "
-"so ~/.vim/plugins.vim
+so ~/.vim/plugins.vim
 
 
 "------------------------------------------------------------
 " vimwiki
 "
-"so ~/.vim/vimwiki.vim
+so ~/.vim/vimwiki.vim
 
 
 "------------------------------------------------------------
@@ -211,4 +210,11 @@ nnoremap <C-L> :nohl<CR><C-L>
 " not sure why this has to be last...
 " Enable syntax highlighting
 syntax on
+
+" has to be last for vimwiki
+" intelligent auto-indenting for each filetype,
+filetype indent plugin on
+
+
+
 
