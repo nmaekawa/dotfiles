@@ -30,7 +30,16 @@ if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
     vim +NeoBundleInstall +qall
 fi
 
+# python pew, virtualenv vars
+mkdir -p ~/.venvs
+export WORKON_HOME=~/.venvs
+if [ -d ~/Documents ]; then
+    export PROJECT_HOME=~/Documents
+fi
+
 # other personal env vars
 if [ -e ~/.ssh/naomi.env ]; then
     source ~/.ssh/naomi.env
 fi
+
+
