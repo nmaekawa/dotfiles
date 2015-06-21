@@ -21,6 +21,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
     NeoBundle 'kien/ctrlp.vim'
     NeoBundle 'flazz/vim-colorschemes'
     NeoBundle 'vimwiki/vimwiki'
+    NeoBundle 'itchyny/calendar.vim'
 call neobundle#end()
 
 " check for uninstalled bundles on startup

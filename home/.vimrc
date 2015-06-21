@@ -202,6 +202,10 @@ so ~/.vim/plugins.vim
 "
 so ~/.vim/vimwiki.vim
 
+"------------------------------------------------------------
+" calendar
+"
+so ~/.vim/calendar.vim
 
 "------------------------------------------------------------
 " pydiction location
