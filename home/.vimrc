@@ -155,7 +155,7 @@ set shiftwidth=4
 set softtabstop=4
 set backspace=indent,eol,start
 
-set textwidth=90
+set textwidth=79
 set encoding=utf-8
 
 " display tabs and trailling spaces visually
@@ -194,7 +194,7 @@ nnoremap <C-L> :nohl<CR><C-L>
 "------------------------------------------------------------
 " plugins
 "
-so ~/.vim/plugins.vim
+"so ~/.vim/plugins.vim
 
 
 "------------------------------------------------------------
@@ -205,7 +205,7 @@ so ~/.vim/vimwiki.vim
 "------------------------------------------------------------
 " calendar
 "
-so ~/.vim/calendar.vim
+"so ~/.vim/calendar.vim
 
 "------------------------------------------------------------
 " pydiction location

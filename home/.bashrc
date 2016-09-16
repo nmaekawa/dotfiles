@@ -42,4 +42,7 @@ if [ -e ~/.ssh/naomi.env ]; then
     source ~/.ssh/naomi.env
 fi
 
-
+# turnoff hibernation mode, check:
+# https://www.macissues.com/2015/05/08/how-to-fix-your-mac-not-waking-from-sleep/
+# sudo pmset standby 0
+# sudo pmset autopoweroff 0
