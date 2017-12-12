@@ -33,8 +33,8 @@ fi
 # python pew, virtualenv vars
 mkdir -p ~/.venvs
 export WORKON_HOME=~/.venvs
-if [ -d ~/Documents ]; then
-    export PROJECT_HOME=~/Documents
+if [ -d ~/Documents/devo ]; then
+    export PROJECT_HOME=~/Documents/devo
 fi
 
 # other personal env vars
@@ -46,3 +46,6 @@ fi
 # https://www.macissues.com/2015/05/08/how-to-fix-your-mac-not-waking-from-sleep/
 # sudo pmset standby 0
 # sudo pmset autopoweroff 0
+
+# postgres bin path
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"

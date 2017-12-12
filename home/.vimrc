@@ -107,10 +107,11 @@ endtry
 set background=dark
 
 
-"if has("autocmd")
-"    " treat .json files as .js
-"    autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-"endif
+if has("autocmd")
+    " treat .json files as .js
+    " autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+    autocmd BufNewFile,BufRead *.json setfiletype json
+endif
 
 "------------------------------------------------------------
 " reading/writing
@@ -194,7 +195,7 @@ nnoremap <C-L> :nohl<CR><C-L>
 "------------------------------------------------------------
 " plugins
 "
-"so ~/.vim/plugins.vim
+so ~/.vim/plugins.vim
 
 
 "------------------------------------------------------------

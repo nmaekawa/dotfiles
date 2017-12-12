@@ -96,3 +96,23 @@ prompt_git() {
     fi;
 }
 
+
+# this requires bash v4
+# bash ini parser
+# http://theoldschooldevops.com/2008/02/09/bash-ini-parser/
+# https://gist.githubusercontent.com/splaspood/1473761/raw/9119aab4a5ec8936c9d9d88cfadd3bc597d7a321/bash_iniparse.sh
+# https://github.com/albfan/bash-ini-parser/blob/master/bash-ini-parser
+cfg.parser () {
+    fixed_file=$(cat $1 | sed 's/ = /=/g')   # fix ' = ' to be '='
+    IFS=$'\n' && ini=( $fixed_file )         # convert to line-array
+    ini=( ${ini[*]//;*/} )                   # remove comments
+    ini=( ${ini[*]/#[/\}$'\n'cfg.section.} ) # set section prefix
+    ini=( ${ini[*]/%]/ \(} )                 # convert text2function (1)
+    ini=( ${ini[*]/=/=\( } )                 # convert item to array
+    ini=( ${ini[*]/%/ \)} )                  # close array parenthesis
+    ini=( ${ini[*]/%\( \)/\(\) \{} )         # convert text2function (2)
+    ini=( ${ini[*]/%\} \)/\}} )              # remove extra parenthesis
+    ini[0]=''                                # remove first element
+    ini[${#ini[*]} + 1]='}'                  # add the last brace
+    eval "$(echo "${ini[*]}")"               # eval the result
+}

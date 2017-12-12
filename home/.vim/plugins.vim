@@ -14,14 +14,15 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
     "NeoBundle 'Shougo/neocomplcache.vim'
     "NeoBundle 'scrooloose/syntastic'
-    NeoBundle 'Shougo/neosnippet.vim'
-    NeoBundle 'Shougo/neosnippet-snippets'
-    NeoBundle 'Shougo/unite.vim'
-    NeoBundle 'tpope/vim-fugitive'
-    NeoBundle 'kien/ctrlp.vim'
+    "NeoBundle 'Shougo/neosnippet.vim'
+    "NeoBundle 'Shougo/neosnippet-snippets'
+    "NeoBundle 'Shougo/unite.vim'
+    "NeoBundle 'tpope/vim-fugitive'
+    "NeoBundle 'kien/ctrlp.vim'
     NeoBundle 'flazz/vim-colorschemes'
     NeoBundle 'vimwiki/vimwiki'
-    NeoBundle 'itchyny/calendar.vim'
+    NeoBundle 'hashivim/vim-terraform'
+    "NeoBundle 'itchyny/calendar.vim'
 call neobundle#end()
 
 " check for uninstalled bundles on startup
