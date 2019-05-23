@@ -101,7 +101,12 @@ endif
 
 " colors
 try
-    colorscheme desert
+"    colorscheme desert
+"    colorscheme iceberg
+"    colorscheme underwater
+"    colorscheme zenburn
+"    colorscheme lizard
+    colorscheme industry
 catch
 endtry
 set background=dark
@@ -111,6 +116,8 @@ if has("autocmd")
     " treat .json files as .js
     " autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
     autocmd BufNewFile,BufRead *.json setfiletype json
+    autocmd BufNewFile,BufRead *.yml setfiletype yaml
+    autocmd Filetype yaml setlocal ts=2 sw=2 sts=2
 endif
 
 "------------------------------------------------------------

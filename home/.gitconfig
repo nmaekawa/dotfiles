@@ -43,8 +43,8 @@
 	##########
 	unstage = reset HEAD
 	##########
-	l = log --oneline
-	lg = log --oneline --decorate
+	l = log --oneline --decorate
+    lg = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=short
 	##########
 	co = checkout
 	cob = checkout -b
