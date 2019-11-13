@@ -48,4 +48,4 @@ fi
 # sudo pmset autopoweroff 0
 
 # postgres bin path
-export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+#export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
