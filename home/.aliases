@@ -21,3 +21,8 @@ command -v md5sum > /dev/null || alias md5sum="md5"
 # macos has no `sha1sum`, use `shasum` instead
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
 
+# workaround for git -- uncomment when installing git via brew
+# https://gist.github.com/brandonsimpson/54d9e085c9fde5e6ad3a
+# https://apple.stackexchange.com/questions/248220/how-to-remove-default-git-or-update-it
+# https://support.apple.com/en-us/HT204899
+#alias git='/usr/local/bin/git'

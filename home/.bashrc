@@ -30,13 +30,6 @@ if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
     vim +NeoBundleInstall +qall
 fi
 
-# python pew, virtualenv vars
-mkdir -p ~/.venvs
-export WORKON_HOME=~/.venvs
-if [ -d ~/Documents/devo ]; then
-    export PROJECT_HOME=~/Documents/devo
-fi
-
 # other personal env vars
 if [ -e ~/.ssh/naomi.env ]; then
     source ~/.ssh/naomi.env
@@ -47,5 +40,3 @@ fi
 # sudo pmset standby 0
 # sudo pmset autopoweroff 0
 
-# postgres bin path
-#export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"

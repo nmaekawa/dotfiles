@@ -163,7 +163,7 @@ set shiftwidth=4
 set softtabstop=4
 set backspace=indent,eol,start
 
-set textwidth=79
+set textwidth=88
 set encoding=utf-8
 
 " display tabs and trailling spaces visually
