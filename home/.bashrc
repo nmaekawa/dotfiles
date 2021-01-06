@@ -40,3 +40,17 @@ fi
 # sudo pmset standby 0
 # sudo pmset autopoweroff 0
 
+# to load pyenv automatically
+export PATH="/Users/nmaekawa/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
+export LDFLAGS="-L$(brew --prefix openssl)/lib"
+export CPPFLAGS="-I$(brew --prefix zlib)/include"
+
+# psql with brew install libpq
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+# For compilers to find libp
+#export LDFLAGS="-L/usr/local/opt/libpq/lib"
+#export CPPFLAGS="-I/usr/local/opt/libpq/include"
