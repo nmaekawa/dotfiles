@@ -5,9 +5,6 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
-# personal bin always first
-export PATH="${HOME}/bin:${PATH}"
-
 # load shell dotfiles
 for file in ~/.{path,exports,aliases,functions,extra}; do
     [ -r "${file}" ] && [ -f "${file}" ] && source "${file}"
@@ -40,14 +37,15 @@ fi
 # sudo pmset standby 0
 # sudo pmset autopoweroff 0
 
-# to load pyenv automatically
-export PATH="/Users/nmaekawa/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
-export LDFLAGS="-L$(brew --prefix openssl)/lib"
+export PATH="$(brew --prefix openssl@1.1)/bin:$PATH"
+export CFLAGS="-I$(brew --prefix openssl@1.1)/include -I$(xcrun --show-sdk-path)/usr/include"
+export LDFLAGS="-L$(brew --prefix openssl@1.1)/lib"
 export CPPFLAGS="-I$(brew --prefix zlib)/include"
+
+# pyenv rehash, autocompletion, pyenv as function
+if command -v pyenv >/dev/null; then
+    eval "$(pyenv init -)"
+fi
 
 # psql with brew install libpq
 export PATH="/usr/local/opt/libpq/bin:$PATH"
