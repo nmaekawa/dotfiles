@@ -228,6 +228,8 @@ so ~/.vim/vimwiki.vim
 " not sure why this has to be last...
 " Enable syntax highlighting
 syntax on
+" use new regular expression engine
+set re=0
 
 " has to be last for vimwiki
 " intelligent auto-indenting for each filetype,

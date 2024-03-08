@@ -37,9 +37,15 @@ fi
 # sudo pmset standby 0
 # sudo pmset autopoweroff 0
 
-export PATH="$(brew --prefix openssl@1.1)/bin:$PATH"
-export CFLAGS="-I$(brew --prefix openssl@1.1)/include -I$(xcrun --show-sdk-path)/usr/include"
-export LDFLAGS="-L$(brew --prefix openssl@1.1)/lib"
+# to load pyenv automatically
+export PATH="/Users/nmaekawa/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+# pyenv prompt added via function
+PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
+export LDFLAGS="-L$(brew --prefix openssl)/lib"
 export CPPFLAGS="-I$(brew --prefix zlib)/include"
 
 # pyenv rehash, autocompletion, pyenv as function
@@ -52,3 +58,13 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 # For compilers to find libp
 #export LDFLAGS="-L/usr/local/opt/libpq/lib"
 #export CPPFLAGS="-I/usr/local/opt/libpq/include"
+
+# mysql-client path
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+source /Users/nmaekawa/.docker/init-bash.sh || true # Added by Docker Desktop

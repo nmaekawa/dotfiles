@@ -116,3 +116,27 @@ cfg.parser () {
     ini[${#ini[*]} + 1]='}'                  # add the last brace
     eval "$(echo "${ini[*]}")"               # eval the result
 }
+
+# from https://gist.githubusercontent.com/frnhr/dba7261bcb6970cf6121/raw/a4c284ab42f15527bc1fce3c9292bc8d628d8a84/.bash_profile
+# pyenv virtualenv does not print venv in prompt anymore...
+pyenvVirtualenvUpdatePrompt() {
+    RESET='\[\e[0m\]'
+    [ -z "$PYENV_VIRTUALENV_GLOBAL_NAME" ] && export PYENV_VIRTUALENV_GLOBAL_NAME="$(pyenv global)"
+    VENV_NAME="$(pyenv version-name)"
+    VENV_NAME="${VENV_NAME##*/}"
+    GLOBAL_NAME="$PYENV_VIRTUALENV_GLOBAL_NAME"
+
+    # non-global versions:
+    COLOR="$BLUE"
+    # global version:
+    [ "$VENV_NAME" == "$GLOBAL_NAME" ] && COLOR="$RED"
+    # virtual envs:
+    [ "${VIRTUAL_ENV##*/}" == "$VENV_NAME" ] && COLOR="$GREEN"
+
+    if [ -z "$COLOR" ]; then
+        return;
+    else
+        echo -e "($COLOR${VENV_NAME}$RESET)"
+    fi
+}
+
