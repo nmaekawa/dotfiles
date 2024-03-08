@@ -63,3 +63,5 @@
 	template = ~nmaekawa/.gitmessage.txt
 [mergetool]
 	keepBackup = true
+[init]
+	defaultBranch = main
