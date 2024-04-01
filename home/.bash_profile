@@ -29,4 +29,4 @@ if [ -f '/Users/nmaekawa/opt/google-cloud-sdk/completion.bash.inc' ]; then . '/U
 export HOMEBREW_GITHUB_API_TOKEN="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"
 
 
-source /Users/nmaekawa/.docker/init-bash.sh || true # Added by Docker Desktop
+eval "$(/opt/homebrew/bin/brew shellenv)"

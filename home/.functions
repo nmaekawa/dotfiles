@@ -119,6 +119,7 @@ cfg.parser () {
 
 # from https://gist.githubusercontent.com/frnhr/dba7261bcb6970cf6121/raw/a4c284ab42f15527bc1fce3c9292bc8d628d8a84/.bash_profile
 # pyenv virtualenv does not print venv in prompt anymore...
+# 01apr24: not working after moving from intel to apple silicon m3pro  (?)
 pyenvVirtualenvUpdatePrompt() {
     RESET='\[\e[0m\]'
     [ -z "$PYENV_VIRTUALENV_GLOBAL_NAME" ] && export PYENV_VIRTUALENV_GLOBAL_NAME="$(pyenv global)"
@@ -140,3 +141,6 @@ pyenvVirtualenvUpdatePrompt() {
     fi
 }
 
+function prompt_pyenv() {
+    echo -n "($(pyenv version-name))"
+}

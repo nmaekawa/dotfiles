@@ -67,4 +67,3 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-source /Users/nmaekawa/.docker/init-bash.sh || true # Added by Docker Desktop
