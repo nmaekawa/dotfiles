@@ -37,8 +37,10 @@ fi
 # sudo pmset standby 0
 # sudo pmset autopoweroff 0
 
-# to load pyenv automatically
-export PATH="/Users/nmaekawa/.pyenv/bin:$PATH"
+# path to homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# to load pyenv automaticall
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 # pyenv prompt added via function
@@ -49,18 +51,15 @@ export LDFLAGS="-L$(brew --prefix openssl)/lib"
 export CPPFLAGS="-I$(brew --prefix zlib)/include"
 
 # pyenv rehash, autocompletion, pyenv as function
-if command -v pyenv >/dev/null; then
-    eval "$(pyenv init -)"
-fi
+#if command -v pyenv >/dev/null; then
+#   eval "$(pyenv init -)"
+#fi
 
 # psql with brew install libpq
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 # For compilers to find libp
 #export LDFLAGS="-L/usr/local/opt/libpq/lib"
 #export CPPFLAGS="-I/usr/local/opt/libpq/include"
-
-# mysql-client path
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

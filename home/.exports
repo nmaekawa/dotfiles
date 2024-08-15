@@ -22,12 +22,11 @@ NC='\e[0m'
 
 # if running interactively, then:
 if [ "$PS1" ]; then
-    #export PS1='\u@\h:\w > '
+    export PS1=''
     export TERM=xterm
     export EDITOR=vim
     set -o vi
 
-    PS1="\$(prompt_pyenv) "                                # venv
     PS1+="${LIGHTGRAY}#${GREEN}[${LIGHTBLUE}\t${GREEN}] "  # time 24h
     PS1+="${LIGHTRED}\u${GREEN}@${YELLOW}\h${GREEN}:"      # user and hostname
     PS1+="${PURPLE}\w${LIGHTGRAY} "                        # pwd
@@ -36,7 +35,7 @@ if [ "$PS1" ]; then
 fi
 
 # personal bin always comes first
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 # larger bash history
 export HISTSIZE=32768
